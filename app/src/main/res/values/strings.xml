@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">||_Kontrolinio_4_uzduotis</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="pirmas">1 Užklausa</string>
+    <string name="antras">2 Užklausa</string>
+    <string name="trecias">3 Užklausa</string>
+</resources>
