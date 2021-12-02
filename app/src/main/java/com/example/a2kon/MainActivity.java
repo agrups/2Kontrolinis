@@ -1,8 +1,12 @@
 package com.example.a2kon;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -12,42 +16,18 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
-}
-
-
-
-
-
-
-
-
-/*    @Override
+        @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater=getMenuInflater();
         inflater.inflate(R.menu.menu1,menu);
         return true;
-    }*/
+    }
 
-
-
-
-/*    @Override
+        @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()){
             case R.id.first:
-                return true;
-            case R.id.second:
-                return true;
-            case R.id.third:
-                finishAffinity();
-                System.exit(0);
-        }
-        return super.onOptionsItemSelected(item);
-    }*/
-
-
-
-/*                getSupportFragmentManager().beginTransaction();
+                getSupportFragmentManager().beginTransaction();
                 SecondFragment fragment;
 
                 fragment = new SecondFragment();
@@ -57,5 +37,32 @@ public class MainActivity extends AppCompatActivity {
 
                 fragment.setArguments(args);
                 getSupportFragmentManager().beginTransaction()
-                        .replace(R.id.graphPlaceHolder, fragment)
-                        .addToBackStack(null).commit();*/
+                        .replace(R.id.webLayout, fragment)
+                        .addToBackStack(null).commit();
+                return true;
+
+            case R.id.second:
+                getSupportFragmentManager().beginTransaction();
+                SecondFragment fragment1;
+
+                fragment1 = new SecondFragment();
+
+                Bundle args1 = new Bundle();
+                args1.putString("url", "https://github.com/");
+
+                fragment1.setArguments(args1);
+                getSupportFragmentManager().beginTransaction()
+                        .replace(R.id.webLayout, fragment1)
+                        .addToBackStack(null).commit();
+                return true;
+            case R.id.third:
+                finishAffinity();
+                System.exit(0);
+        }
+        return super.onOptionsItemSelected(item);
+    }
+}
+
+
+
+
